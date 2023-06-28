@@ -2,9 +2,9 @@ import openai from "@/openai";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-  //totos in the body of the post
+  //todos in the body of the post
   const { todos } = await request.json();
-  console.log(todos);
+  // console.log(todos);
 
   //comunicate with openAI GPT
   const response = await openai.createChatCompletion({
@@ -28,8 +28,8 @@ export async function POST(request: Request) {
   });
 
   const { data } = response;
-  console.log("Data is: ", data);
-  console.log(data.choices[0].message);
+  // console.log("Data is: ", data);
+  // console.log(data.choices[0].message);
 
   return NextResponse.json(data.choices[0].message);
 }
