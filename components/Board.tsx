@@ -46,11 +46,11 @@ const Board = () => {
     const startColIndex = column[Number(source.droppableId)];
     const finishColIndex = column[Number(destination.droppableId)];
 
-    console.log(column);
-    console.log(source);
-    console.log(destination);
-    console.log(startColIndex);
-    console.log(finishColIndex);
+    // console.log(column);
+    // console.log(source);
+    // console.log(destination);
+    // console.log(startColIndex);
+    // console.log(finishColIndex);
 
     if (!startColIndex || !finishColIndex) return;
 
