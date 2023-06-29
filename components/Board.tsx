@@ -51,6 +51,9 @@ const Board = () => {
     console.log(destination);
     console.log(startColIndex);
     console.log(finishColIndex);
+
+    if (!startColIndex || !finishColIndex) return;
+
     const startCol: Column = {
       id: startColIndex[0],
       todos: startColIndex[1].todos,
